@@ -39,7 +39,6 @@ export default function CurrentWeather() {
         }
         try {
             const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}`;
-
             const response = await fetch(url);
             const data = await response.json();
             console.log(data);
@@ -53,6 +52,7 @@ export default function CurrentWeather() {
                 icon: icon, 
                 description: description
             })
+            setCity(data.name);
 
         } catch (error) {
             
@@ -89,13 +89,6 @@ export default function CurrentWeather() {
                     </div>
                 </div>
             </div>
-
-            <div className="future-forecast">
-                <h3>5-DAY FORECAST </h3>
-                <p>Today</p>
-                
-            </div>
-
         </div>
     )
 }
