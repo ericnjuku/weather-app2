@@ -1,13 +1,25 @@
 .weather{
     place-self: center;
     padding: 40px;
-    border-radius: 10px;
-    background: green;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 400px;
     justify-content: center;
+    margin-top: 40px;
+}
+
+/* Light theme */
+.light .weather {
+    background: #74b9ff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Dark theme */
+.dark .weather {
+    background: #2d3436;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .search-bar{
@@ -18,60 +30,85 @@
 }
 
 .search-bar input{
-    height: 30px;
+    height: 40px;
     border: none;
     outline: none;
     border-radius: 40px;
     padding-left: 25px;
-    color: grey;
-    font-size: 18px;
-    width: 200px;
+    font-size: 16px;
+    width: 250px;
+}
+
+.light .search-bar input {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+.dark .search-bar input {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .search-icon{
-    width: 45px;   
-    height: 45px;  
+    width: 50px;   
+    height: 50px;  
     object-fit: contain; 
-    padding: 8px;
+    padding: 10px;
     border-radius: 50%;
-    background: aliceblue;
     cursor: pointer;
-    transition: transform 0.2s ease;
 }
 
-.search-icon:hover {
-    transform: scale(1.05);
+.light .search-icon {
+    background: rgba(255, 255, 255, 0.9);
 }
 
-/* Unit Toggle Styles */
+.dark .search-icon {
+    background: rgba(255, 255, 255, 0.1);
+}
+
 .unit-toggle {
     display: flex;
     gap: 5px;
     margin-bottom: 20px;
-    background: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     padding: 5px;
+}
+
+.light .unit-toggle {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.dark .unit-toggle {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .toggle-btn {
     border: none;
     background: transparent;
-    color: white;
     padding: 8px 15px;
     border-radius: 15px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    transition: all 0.3s ease;
 }
 
-.toggle-btn.active {
+.light .toggle-btn {
+    color: white;
+}
+
+.dark .toggle-btn {
+    color: white;
+}
+
+.light .toggle-btn.active {
     background: white;
-    color: green;
+    color: #0984e3;
 }
 
-.toggle-btn:hover:not(.active) {
-    background: rgba(255, 255, 255, 0.1);
+.dark .toggle-btn.active {
+    background: #74b9ff;
+    color: #2d3436;
 }
 
 .weather-icon{
@@ -80,23 +117,47 @@
 }
 
 .temperature {
-    color: white;
-    font-size: 50px;
+    font-size: 3.5rem;
     line-height: 1;
     margin: 10px 0;
+    font-weight: 700;
+}
+
+.light .temperature {
+    color: white;
+}
+
+.dark .temperature {
+    color: white;
 }
 
 .description{
-    color: white;
-    font-size: 18px; 
+    font-size: 1.3rem; 
     text-transform: capitalize;
     margin: 5px 0;
+    font-weight: 500;
+}
+
+.light .description {
+    color: white;
+}
+
+.dark .description {
+    color: white;
 }
 
 .location {
-    color: white;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin: 10px 0;
+    font-weight: 600;
+}
+
+.light .location {
+    color: white;
+}
+
+.dark .location {
+    color: white;
 }
 
 .humidity-icon, .wind-icon {
@@ -108,7 +169,6 @@
     width: 100%;
     margin-top: 30px;
     display: flex;
-    color: white;
     justify-content: space-between;
     gap: 20px;
 }
@@ -117,13 +177,23 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 22px;
+    font-size: 1.3rem;
+}
+
+.light .weather-data {
+    color: white;
+}
+
+.dark .weather-data {
+    color: white;
 }
 
 .weather-data .col span{
     display: block;
-    font-size: 16px;
+    font-size: 0.9rem;
+    opacity: 0.9;
 }
+
 .weather-data .col img{
     width: 26px;
 }

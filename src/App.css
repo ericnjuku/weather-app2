@@ -1,0 +1,35 @@
+/* Light theme */
+.light {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  padding: 20px;
+}
+
+/* Dark theme */
+.dark {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2d3436, #1e272e);
+  padding: 20px;
+}
+
+.theme-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.theme-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+}
