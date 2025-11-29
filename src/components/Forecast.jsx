@@ -102,7 +102,7 @@ function Forecast({ city, unit = "celsius" }) {
     };
 
     fetchForecast();
-  }, [city, unit]); // Added unit to dependencies to refetch when unit changes
+  }, [city, unit]);
 
   return (
     <div className="forecast">
